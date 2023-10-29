@@ -1,0 +1,33 @@
+Algoritmo RotinaDeAcordar
+Declare
+    diaSemana, hora, minutos: Inteiro
+Inicio
+    // Defina o dia da semana (1 = segunda, 7 = domingo)
+    diaSemana <- 2
+
+    // Defina a hora e minutos em que deseja acordar
+    hora <- 7
+    minutos <- 0
+
+    Escreva("Você está acordando em uma ", diaSemana, "ª feira.")
+
+    Se (diaSemana = 6) OU (diaSemana = 7) Então
+        Escreva("Você pode dormir mais um pouco.")
+        hora <- hora + 1
+    FimSe
+
+    Escreva("Hora de acordar!")
+
+    Enquanto (hora < 10) Faça
+        Escreva("Ainda é cedo. Continue dormindo.")
+        hora <- hora + 1
+    FimEnquanto
+
+    Escreva("Agora são ", hora, " horas e ", minutos, " minutos. Hora de levantar!")
+
+    Se (diaSemana = 6) OU (diaSemana = 7) Então
+        Escreva("Você pode aproveitar o final de semana!")
+    Senão
+        Escreva("É dia de trabalho. Vamos começar o dia!")
+    FimSe
+FimAlgoritmo
